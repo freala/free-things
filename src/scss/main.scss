@@ -1,6 +1,11 @@
 @import "reset/reset";
 @import "/settings/fonts";
 @import "/settings/colors";
+@import "/components/home.scss";
+@import "/components/form.scss";
+@import "/components/login.scss";
+@import "/components/register.scss";
+@import "/components/logout.scss";
 
 body{
   font-family: $font-base;
