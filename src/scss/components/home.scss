@@ -1,9 +1,12 @@
+@import "../settings/_colors.scss";
+@import "../settings/_fonts.scss";
+
 header{
   padding: 2rem 6rem;
-  background-image: url("/src/assets/Home-Hero-Image.jpg");
+  background-image: url("/assets/Home-Hero-Image.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
+  background-size: 60%;
+  background-position: -50%;
   div.account__links{
     display: flex;
     justify-content: flex-end;
@@ -11,9 +14,13 @@ header{
       padding: 0.5rem;
       margin: 0.5rem;
       font-size: 0.8rem;
-      :hover{
-        border: 1px solid $accent-color;
+      a{
+        text-decoration: none;
+        color: $font-color;
       }
+    }
+    div.login:hover, div.register:hover{
+      border: 1px solid $accent-color;
     }
   }
   nav ul{
@@ -29,6 +36,160 @@ header{
     }
   }
   div.banner{
-    margin: 10rem 12rem;
+    width: 100%;
+    padding: 7rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    div.message{
+      text-align: center;
+      padding: 0 6rem;
+      width: 50%;
+      h1, h2{
+        font-size: 2rem;
+        margin: 0.7rem;
+      }
+      img{
+        margin-bottom: 2rem;
+      }
+    }
+    div.buttons{
+      display: flex;
+      justify-content: center;
+      padding: 0 6rem;
+      width: 50%;
+      button{
+        width: 35%;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
+        margin: 0 1rem;
+        border: 1px solid $font-color-alt;
+        color: $font-color-alt;
+      }
+    }
+  }
+}
+
+section.three__columns{
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background-color: $accent-color;
+  div.column{
+    text-align: center;
+    padding: 0 4rem;
+    h3{
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+    h4{
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    p{
+      margin-bottom: 1.5rem;
+      text-align: justify;
+      font-family: $font-alt;
+    }
+  }
+}
+
+section.simple__steps{
+  div.intro__steps{
+    text-align: center;
+    padding: 1.5rem;
+    h2{
+      font-size: 2rem;
+      margin: 0.7rem;
+      color: $font-color;
+    }
+    img{
+      color: $font-color;
+    }
+  }
+  div.steps{
+    display: flex;
+    padding: 4rem 20rem;
+    justify-content: space-between;
+    background-color: $background-color;
+    div.step{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+      width: 15%;
+      img{
+        color: $font-color;
+        margin-bottom: 1rem;
+      }
+      h5{
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      div.line{
+        border: 1px solid $font-color;
+        width: 60%;
+        margin-bottom: 1rem;
+      }
+      p{
+        font-size: 0.8rem;
+      }
+    }
+  }
+  div.submit__steps{
+    padding: 2rem 0 4rem;
+    text-align: center;
+    button{
+      text-transform: uppercase;
+      border: 1px solid $font-color-alt;
+      font-size: 1.5rem;
+      padding: 1rem 3rem;
+      width: 15%;
+      a{
+        text-decoration: none;
+        color: $font-color-alt;
+      }
+    }
+  }
+}
+
+section.about__us{
+  display: flex;
+  div.us{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 0;
+    background-color: $background-color;
+    h2{
+      font-size: 2rem;
+      margin: 0 0 2rem;
+      color: $font-color;
+    }
+    img{
+      color: $font-color;
+      margin-bottom: 1.5rem;
+    }
+    p{
+      font-size: 1.5rem;
+      color: $font-color;
+      text-align: center;
+      margin: 0 6rem 2rem;
+    }
+    img.signature{
+      align-self: flex-end;
+      margin: 0 6rem;
+    }
+  }
+  div.team{
+    width: 50%;
+    background-image: url("/assets/People.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }

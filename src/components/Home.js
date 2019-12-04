@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {NavLink} from "react-router-dom";
 import {Link} from "react-scroll";
 import "../scss/components/home.scss";
 
@@ -23,10 +24,10 @@ class HomeHeader extends Component{
             <header id="home">
                 <div className="account__links">
                     <div className="login">
-                        <Link to="/logowanie">Zaloguj</Link>
+                        <NavLink to="/logowanie">Zaloguj</NavLink>
                     </div>
                     <div className="register">
-                        <Link to="/rejestracja">Załóż konto</Link>
+                        <NavLink to="/rejestracja">Załóż konto</NavLink>
                     </div>
                 </div>
                 <nav>
@@ -39,7 +40,7 @@ class HomeHeader extends Component{
                                 duration={500}>Start</Link></li>
                         <li><Link
                                 activeClass="active"
-                                to="three__columns"
+                                to="simple__steps"
                                 spy={true}
                                 smooth={true}
                                 duration={500}>O co chodzi?</Link></li>
@@ -67,7 +68,11 @@ class HomeHeader extends Component{
                     <div className="message">
                         <h1>Zacznij pomagać!</h1>
                         <h2>Oddaj niechciane rzeczy w zaufane ręce</h2>
-                        <img src="/src/assets/Decoration.svg" alt="decoration"/>
+                        <img src="/assets/Decoration.svg" alt="decoration"/>
+                    </div>
+                    <div className="buttons">
+                        <button>oddaj rzeczy</button>
+                        <button>zorganizuj zbiórkę</button>
                     </div>
                 </div>
             </header>
@@ -79,7 +84,29 @@ class HomeThreeColumns extends Component{
     render(){
         return(
             <>
-
+                <section className="three__columns">
+                    <div className="column">
+                        <h3>10</h3>
+                        <h4>oddanych worków</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Curabitur laoreet eu metus vitae dignissim. Maecenas lorem diam, semper a tincidunt a,
+                            pharetra non ligula.</p>
+                    </div>
+                    <div className="column">
+                        <h3>5</h3>
+                        <h4>wspartych organizacji</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Curabitur laoreet eu metus vitae dignissim. Maecenas lorem diam, semper a tincidunt a,
+                            pharetra non ligula.</p>
+                    </div>
+                    <div className="column">
+                        <h3>7</h3>
+                        <h4>zorganizowanych zbiórek</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Curabitur laoreet eu metus vitae dignissim. Maecenas lorem diam, semper a tincidunt a,
+                            pharetra non ligula.</p>
+                    </div>
+                </section>
             </>
         )
     }
@@ -87,7 +114,45 @@ class HomeThreeColumns extends Component{
 
 class HomeSimpleSteps extends Component{
     render(){
-        return null
+        return(
+            <>
+                <section className="simple__steps">
+                    <div className="intro__steps">
+                        <h2>Wystarczą 4 proste kroki</h2>
+                        <img src="/assets/Decoration.svg" alt="decoration"/>
+                    </div>
+                    <div className="steps">
+                        <div className="step">
+                            <img src="/assets/Icon-1.svg"/>
+                            <h5>Wybierz rzeczy</h5>
+                            <div className="line"/>
+                            <p>ubrania, zabawki, sprzęt i inne</p>
+                        </div>
+                        <div className="step">
+                            <img src="/assets/Icon-2.svg"/>
+                            <h5>Spakuj je</h5>
+                            <div className="line"/>
+                            <p>skorzystaj z worków na śmieci</p>
+                        </div>
+                        <div className="step">
+                            <img src="/assets/Icon-3.svg"/>
+                            <h5>Zdecyduj komu chcesz pomóc</h5>
+                            <div className="line"/>
+                            <p>wybierz zaufane miejsce</p>
+                        </div>
+                        <div className="step">
+                            <img src="/assets/Icon-4.svg"/>
+                            <h5>Zamów kuriera</h5>
+                            <div className="line"/>
+                            <p>kurier przyjedzie w dogodnym terminie</p>
+                        </div>
+                    </div>
+                    <div className="submit__steps">
+                        <button><NavLink to="/logowanie">oddaj rzeczy</NavLink></button>
+                    </div>
+                </section>
+            </>
+        )
     }
 }
 
@@ -95,7 +160,16 @@ class HomeAboutUs extends Component{
     render(){
         return(
             <>
-
+                <section className="about__us">
+                    <div className="us">
+                        <h2>O nas</h2>
+                        <img src="/assets/Decoration.svg" alt="decoration"/>
+                        <p>Fusce in gravida nulla, eget eleifend turpis. Pellentesque consectetur,
+                            urna quis egestas aliquet, tortor eros pharetra justo, eu pulvinar quam nunc sed leo. </p>
+                        <img src="/assets/Signature.svg" alt="signature" className="signature"/>
+                    </div>
+                    <div className="team"/>
+                </section>
             </>
         )
     }
