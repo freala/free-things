@@ -179,17 +179,81 @@ class HomeWhoWeHelp extends Component{
     render(){
         return(
             <>
+                <section className="who__we__help">
+                    <h2>Komu pomagamy?</h2>
+                    <img src="/assets/Decoration.svg" alt="decoration"/>
+                    <div className="recipients">
+                        <div>Fundacjom</div>
+                        <div>Organizacjom pozarządowym</div>
+                        <div>Lokalnym zbiórkom</div>
+                    </div>
+                    <div className="content__switch">
+                        <div className="fundations">
 
+                        </div>
+                        <div className="organizations">
+                            <p>Fusce in gravida nulla, eget eleifend turpis. Pellentesque consectetur,
+                                urna quis egestas aliquet, tortor eros pharetra justo, eu pulvinar quam nunc sed leo.
+                                Fusce in gravida nulla, eget eleifend turpis. Pellentesque consectetur,
+                                urna quis egestas aliquet, tortor eros pharetra justo, eu pulvinar quam nunc sed leo.</p>
+                            <div className="organizations__page__one">
+                                <div className="organization__one"></div>
+                                <div className="organization__two"></div>
+                                <div className="organization__three"></div>
+                            </div>
+                            <div className="organizations__page__two">
+                                <div className="organization__one"></div>
+                                <div className="organization__one"></div>
+                                <div className="organization__one"></div>
+                            </div>
+                        </div>
+                        <div className="local"></div>
+                    </div>
+                </section>
             </>
         )
     }
 }
 
 class HomeContact extends Component{
+    state = {
+        name: "",
+        email: "",
+        message: ""
+    };
+    handleInput = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
     render(){
         return(
             <>
-
+                <section className="contact">
+                    <div className="contact__us">
+                        <h2>Skontaktuj się z nami</h2>
+                        <img src="/assets/Decoration.svg" alt="decoration"/>
+                        <form>
+                            <div className="contact__name">
+                                <label htmlFor="name">Wpisz swoje imię</label>
+                                <input id="name" type="text" name="name" value={this.state.name} placeholder="Krzysztof" onChange={this.handleInput}/>
+                            </div>
+                            <div className="contact__email">
+                                <label htmlFor="email">Wpisz swój email</label>
+                                <input id="email" type="email" name="email" value={this.state.email} placeholder="abc@xyz.pl" onChange={this.handleInput}/>
+                            </div>
+                            <div className="contact__message">
+                                <label htmlFor="textarea">Wpisz swoją wiadomość</label>
+                                <textarea id="textarea" name="message" value={this.state.message} placeholder="Fusce in gravida nulla, eget eleifend turpis.
+                                Pellentesque consectetur, urna quis egestas aliquet, tortor eros pharetra justo,
+                                eu pulvinar quam nunc sed leo. Fusce in gravida nulla, eget eleifend turpis.
+                                Pellentesque consectetur, urna quis egestas aliquet, tortor eros pharetra justo,
+                                eu pulvinar quam nunc sed leo." onChange={this.handleInput}/>
+                            </div>
+                            <button type="submit">Wyślij</button>
+                        </form>
+                    </div>
+                </section>
             </>
         )
     }
