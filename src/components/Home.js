@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import {Link} from "react-scroll";
 import "../scss/components/home.scss";
+import HomeWhoWeHelp from "./WhoWeHelp";
 
 class Home extends Component{
     render(){
@@ -175,46 +176,6 @@ class HomeAboutUs extends Component{
     }
 }
 
-class HomeWhoWeHelp extends Component{
-    render(){
-        return(
-            <>
-                <section className="who__we__help">
-                    <h2>Komu pomagamy?</h2>
-                    <img src="/assets/Decoration.svg" alt="decoration"/>
-                    <div className="recipients">
-                        <div>Fundacjom</div>
-                        <div>Organizacjom pozarządowym</div>
-                        <div>Lokalnym zbiórkom</div>
-                    </div>
-                    <div className="content__switch">
-                        <div className="fundations">
-
-                        </div>
-                        <div className="organizations">
-                            <p>Fusce in gravida nulla, eget eleifend turpis. Pellentesque consectetur,
-                                urna quis egestas aliquet, tortor eros pharetra justo, eu pulvinar quam nunc sed leo.
-                                Fusce in gravida nulla, eget eleifend turpis. Pellentesque consectetur,
-                                urna quis egestas aliquet, tortor eros pharetra justo, eu pulvinar quam nunc sed leo.</p>
-                            <div className="organizations__page__one">
-                                <div className="organization__one"></div>
-                                <div className="organization__two"></div>
-                                <div className="organization__three"></div>
-                            </div>
-                            <div className="organizations__page__two">
-                                <div className="organization__one"></div>
-                                <div className="organization__one"></div>
-                                <div className="organization__one"></div>
-                            </div>
-                        </div>
-                        <div className="local"></div>
-                    </div>
-                </section>
-            </>
-        )
-    }
-}
-
 class HomeContact extends Component{
     state = {
         name: "",
@@ -254,6 +215,13 @@ class HomeContact extends Component{
                         </form>
                     </div>
                 </section>
+                <footer>
+                    <p>Copywright by CodersLab</p>
+                    <div className="media__icons">
+                        <i className="fab fa-facebook-square"></i>
+                        <i className="fab fa-instagram"></i>
+                    </div>
+                </footer>
             </>
         )
     }
