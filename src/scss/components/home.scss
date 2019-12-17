@@ -195,39 +195,125 @@ section.about__us{
 }
 
 section.who__we__help{
-
-}
-
-section.contact{
-  display: flex;
-  justify-content: flex-end;
-  background-image: url("/assets/Background-Contact-Form.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  padding: 7rem 0;
-  div.contact__us{
+  text-align: center;
+  padding: 1.5rem;
+  h2{
+    font-size: 2rem;
+    margin: 0.7rem;
+    color: $font-color;
+  }
+  img{
+    color: $font-color;
+    margin-bottom: 2rem;
+  }
+  div.recipients{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 6rem;
-    h2{
-      font-size: 2rem;
-      margin: 0.7rem;
-    }
-    img{
-
-    }
-    form{
-      div.contact__name{
-        width: 50%;
-        float: left;
-      }
-      div.contact__email{
-        width: 50%;
-        float: right;
+    width: 50%;
+    margin: 0 auto;
+    h3{
+      width: 30%;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      margin: 0 1.5rem 3rem;
+      cursor: pointer;
+      &:hover{
+        border: 1px solid #737373;
       }
     }
   }
+  div.recipients__content{
+    text-align: center;
+    div.description{
+      width: 37%;
+      text-align: center;
+      margin: 0 auto 3rem;
+      font-size: 1.3rem;
+    }
+    ul.content__list{
+      margin: 0 7rem;
+      font-family: $font-alt;
+      color: #3C3C3C;
+      li{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #3C3C3C;
+        div{
+          text-align: start;
+          h3{
+            font-size: 1.6rem;
+            font-weight: normal;
+            margin: 0.5rem 0;
+          }
+        }
+      }
+    }
+    ul.content__pages{
+      display: flex;
+      align-items: center;
+      margin: 2rem auto;
+      width: 8%;
+      li{
+        font-size: 1.5rem;
+        padding: 0.7rem;
+        cursor: pointer;
+        margin-right: 0.3rem;
+        &:hover{
+          border: 1px solid #737373;
+        }
+      }
+    }
+  }
+}
+
+section.contact{
+  position: relative;
+  div.transparent__background{
+    background-image: url("/assets/Background-Contact-Form.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50rem;
+    opacity: 0.3;
+  }
+  div.section__content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: end;
+    div.contact__us{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 6rem;
+      h2{
+        font-size: 2rem;
+        margin: 0.7rem;
+      }
+      img{
+        margin-bottom: 2rem;
+      }
+      form{
+        div.contact__name{
+          width: 50%;
+          float: left;
+        }
+        div.contact__email{
+          width: 50%;
+          float: right;
+        }
+      }
+    }
+    div.section__footer{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
 }

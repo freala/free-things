@@ -124,25 +124,25 @@ class HomeSimpleSteps extends Component{
                     </div>
                     <div className="steps">
                         <div className="step">
-                            <img src="/assets/Icon-1.svg"/>
+                            <img src="/assets/Icon-1.svg" alt="icon"/>
                             <h5>Wybierz rzeczy</h5>
                             <div className="line"/>
                             <p>ubrania, zabawki, sprzęt i inne</p>
                         </div>
                         <div className="step">
-                            <img src="/assets/Icon-2.svg"/>
+                            <img src="/assets/Icon-2.svg" alt="icon"/>
                             <h5>Spakuj je</h5>
                             <div className="line"/>
                             <p>skorzystaj z worków na śmieci</p>
                         </div>
                         <div className="step">
-                            <img src="/assets/Icon-3.svg"/>
+                            <img src="/assets/Icon-3.svg" alt="icon"/>
                             <h5>Zdecyduj komu chcesz pomóc</h5>
                             <div className="line"/>
                             <p>wybierz zaufane miejsce</p>
                         </div>
                         <div className="step">
-                            <img src="/assets/Icon-4.svg"/>
+                            <img src="/assets/Icon-4.svg" alt="icon"/>
                             <h5>Zamów kuriera</h5>
                             <div className="line"/>
                             <p>kurier przyjedzie w dogodnym terminie</p>
@@ -191,37 +191,43 @@ class HomeContact extends Component{
         return(
             <>
                 <section className="contact">
-                    <div className="contact__us">
-                        <h2>Skontaktuj się z nami</h2>
-                        <img src="/assets/Decoration.svg" alt="decoration"/>
-                        <form>
-                            <div className="contact__name">
-                                <label htmlFor="name">Wpisz swoje imię</label>
-                                <input id="name" type="text" name="name" value={this.state.name} placeholder="Krzysztof" onChange={this.handleInput}/>
-                            </div>
-                            <div className="contact__email">
-                                <label htmlFor="email">Wpisz swój email</label>
-                                <input id="email" type="email" name="email" value={this.state.email} placeholder="abc@xyz.pl" onChange={this.handleInput}/>
-                            </div>
-                            <div className="contact__message">
-                                <label htmlFor="textarea">Wpisz swoją wiadomość</label>
-                                <textarea id="textarea" name="message" value={this.state.message} placeholder="Fusce in gravida nulla, eget eleifend turpis.
+                    <div className="transparent__background">
+
+                    </div>
+                    <div className="section__content">
+                        <div className="contact__us">
+                            <h2>Skontaktuj się z nami</h2>
+                            <img src="/assets/Decoration.svg" alt="decoration"/>
+                            <form>
+                                <div className="contact__name">
+                                    <label htmlFor="name">Wpisz swoje imię</label>
+                                    <input id="name" type="text" name="name" value={this.state.name} placeholder="Krzysztof" onChange={this.handleInput}/>
+                                </div>
+                                <div className="contact__email">
+                                    <label htmlFor="email">Wpisz swój email</label>
+                                    <input id="email" type="email" name="email" value={this.state.email} placeholder="abc@xyz.pl" onChange={this.handleInput}/>
+                                </div>
+                                <div className="contact__message">
+                                    <label htmlFor="textarea">Wpisz swoją wiadomość</label>
+                                    <textarea id="textarea" name="message" value={this.state.message} placeholder="Fusce in gravida nulla, eget eleifend turpis.
                                 Pellentesque consectetur, urna quis egestas aliquet, tortor eros pharetra justo,
                                 eu pulvinar quam nunc sed leo. Fusce in gravida nulla, eget eleifend turpis.
                                 Pellentesque consectetur, urna quis egestas aliquet, tortor eros pharetra justo,
                                 eu pulvinar quam nunc sed leo." onChange={this.handleInput}/>
+                                </div>
+                                <button type="submit">Wyślij</button>
+                            </form>
+                        </div>
+                        <div className="section__footer">
+                            <p>Copywright by CodersLab</p>
+                            <div className="media__icons">
+                                <i className="fab fa-facebook-square"></i>
+                                <i className="fab fa-instagram"></i>
                             </div>
-                            <button type="submit">Wyślij</button>
-                        </form>
+                        </div>
                     </div>
+
                 </section>
-                <footer>
-                    <p>Copywright by CodersLab</p>
-                    <div className="media__icons">
-                        <i className="fab fa-facebook-square"></i>
-                        <i className="fab fa-instagram"></i>
-                    </div>
-                </footer>
             </>
         )
     }
