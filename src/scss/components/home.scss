@@ -60,7 +60,7 @@ header{
       padding: 0 6rem;
       width: 50%;
       button{
-        width: 35%;
+        width: 45%;
         text-transform: uppercase;
         font-size: 1.5rem;
         padding: 1rem 1.5rem;
@@ -226,6 +226,7 @@ section.who__we__help{
   }
   div.recipients__content{
     text-align: center;
+    padding-bottom: 2rem;
     div.description{
       width: 37%;
       text-align: center;
@@ -276,21 +277,29 @@ section.contact{
     background-image: url("/assets/Background-Contact-Form.jpg");
     background-position: left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 95%;
     width: 100%;
-    height: 50rem;
+    height: 47rem;
     opacity: 0.3;
   }
   div.section__content{
     position: absolute;
     top: 0;
     right: 0;
-    text-align: end;
+    width: 100%;
+    height: 47rem;
+    padding: 6rem 6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     div.contact__us{
+      float: right;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 6rem;
+      padding: 0 7rem;
+      align-self: flex-end;
       h2{
         font-size: 2rem;
         margin: 0.7rem;
@@ -299,20 +308,75 @@ section.contact{
         margin-bottom: 2rem;
       }
       form{
-        div.contact__name{
-          width: 50%;
-          float: left;
+        width: 100%;
+        &:after{
+          content: "";
+          clear: both;
+          display: table;
         }
-        div.contact__email{
-          width: 50%;
+        input, textarea{
+          display: block;
+          font-size: 0.8rem;
+          border: none;
+          border-bottom: 1px solid $font-color;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          width: 100%;
+          margin: 1rem 0;
+          background: transparent;
+          outline: none;
+          font-family: $font-base;
+        }
+        textarea{
+          height: 5rem;
+          resize: none;
+          margin-bottom: 2rem;
+        }
+        input::placeholder, textarea::placeholder{
+          color: #dedede;
+        }
+        label{
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+        div.contact__data{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 2rem 0;
+        }
+        button{
+          padding: 0.6rem 2rem;
+          font-size: 1rem;
           float: right;
+          border: 1px solid $font-color;
         }
       }
     }
     div.section__footer{
+      padding: 1rem;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      p{
+        font-size: 1rem;
+        margin-right: 10rem;
+        position: absolute;
+        top: 35%;
+        left: 45%;
+      }
+      .media__icons{
+        font-size: 1.5rem;
+        a{
+          color: $font-color;
+          i{
+            margin: 0 0.5rem;
+          }
+        }
+      }
     }
   }
 
