@@ -1,0 +1,63 @@
+@import "../settings/_colors.scss";
+@import "../settings/_fonts.scss";
+
+header#login__header{
+  padding: 2rem 6rem;
+  div.account__links {
+    display: flex;
+    justify-content: flex-end;
+    div.login, div.register {
+      padding: 0.5rem;
+      margin: 0.5rem;
+      font-size: 0.8rem;
+      a {
+        text-decoration: none;
+        color: $font-color;
+      }
+    }
+    div.login:hover, div.register:hover {
+      border: 1px solid $accent-color;
+    }
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      padding: 1rem 0.5rem;
+      margin: 0.5rem;
+      cursor: pointer;
+      &:hover{
+        border: 1px solid black;
+      }
+      a{
+        text-decoration: none;
+        color: $font-color;
+      }
+    }
+  }
+}
+div.login__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    font-size: 2rem;
+    margin: 0.7rem;
+    color: $font-color;
+  }
+  img{
+    color: $font-color;
+    margin-bottom: 2rem;
+  }
+  form{
+    width: 30%;
+    div.login__window{
+      padding: 1rem 1.5rem;
+      margin: 0 auto 2rem;
+      background-color: #F2F3F3;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+  }
+}

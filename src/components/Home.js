@@ -22,7 +22,7 @@ class Home extends Component{
 class HomeHeader extends Component{
     render(){
         return(
-            <header id="home">
+            <header id="home__header">
                 <div className="account__links">
                     <div className="login">
                         <NavLink to="/logowanie">Zaloguj</NavLink>
