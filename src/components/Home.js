@@ -187,6 +187,25 @@ class HomeContact extends Component{
             [e.target.name]: e.target.value
         });
     };
+    handleSubmit = (e) => {
+        e.preventDefault();
+        fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+            method: 'post',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+                "name": this.state.name,
+                "email": this.state.email,
+                "message": this.state.message
+            })
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    };
     render(){
         return(
             <>
@@ -197,7 +216,7 @@ class HomeContact extends Component{
                         <div className="contact__us">
                             <h2>Skontaktuj się z nami</h2>
                             <img src="/assets/Decoration.svg" alt="decoration"/>
-                            <form>
+                            <form onSubmit={this.handleSubmit}>
                                 <div className="contact__data">
                                     <div className="contact__name">
                                         <label htmlFor="name">Wpisz swoje imię</label>
@@ -227,7 +246,6 @@ class HomeContact extends Component{
                             </div>
                         </div>
                     </div>
-
                 </section>
             </>
         )
